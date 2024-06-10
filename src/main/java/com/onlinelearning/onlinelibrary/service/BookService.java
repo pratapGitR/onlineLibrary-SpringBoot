@@ -23,9 +23,9 @@ public class BookService {
         return bookRepo.findByBookTitleContainingIgnoreCase(bookTitle);
     }
     public List<Book>rentedBooks(){
-        return bookRepo.findByRentedIsTrue();
+        return bookRepo.findByIsRentedTrue();
     }
     public List<Book>availableBooks(){
-        return bookRepo.findByRentedIsFalse();
+        return bookRepo.findByIsRentedFalse();
     }
 }
